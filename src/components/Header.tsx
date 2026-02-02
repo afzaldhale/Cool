@@ -49,11 +49,13 @@ const Header = () => {
               alt="Sahara Cool Tech Logo"
               className="w-12 h-12 object-contain"
             />
-            <div className="flex flex-col">
-              <span className="font-bold text-lg text-foreground leading-tight">
+
+            {/* Brand Text */}
+            <div className="flex flex-col leading-tight">
+              <span className="font-extrabold text-xl md:text-2xl text-foreground">
                 Sahara Cool
               </span>
-              <span className="text-xs text-muted-foreground -mt-0.5">
+              <span className="text-sm md:text-base font-semibold text-muted-foreground -mt-1">
                 Tech
               </span>
             </div>
