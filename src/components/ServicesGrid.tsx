@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
   Wind,
   Droplets,
@@ -8,6 +8,7 @@ import {
   Gauge,
   Settings,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 /* ---------------- Types ---------------- */
 
@@ -15,91 +16,92 @@ type Service = {
   title: string;
   description: string;
   price: string;
-  icon: React.ElementType;
+  icon: LucideIcon;
   image: string;
   alt: string;
 };
 
-/* ---------------- Services Data ---------------- */
-
-const SERVICES: Service[] = [
-  {
-    icon: Droplets,
-    title: "1.5 Ton AC Foam Jet Deep Cleaning",
-    description:
-      "High-pressure foam jet cleaning of indoor unit, filters, blower, and coils.",
-    price: "599",
-    image: "/src/components/assets/AC_Foam_Jet_Deep_Cleaning.jpeg",
-    alt: "AC foam jet deep cleaning service",
-  },
-  {
-    icon: Thermometer,
-    title: "1.5 Ton AC Gas Top-Up",
-    description:
-      "Professional refrigerant gas top-up with pressure testing.",
-    price: "999",
-    image: "/src/components/assets/AC_Gas.jpg",
-    alt: "AC gas top up service",
-  },
-  {
-    icon: Gauge,
-    title: "1.5 Ton AC Complete Gas Filling",
-    description:
-      "Complete gas evacuation, vacuuming, and fresh refrigerant filling.",
-    price: "1999",
-    image: "/src/components/assets/AC_Gas.jpg",
-    alt: "AC complete gas filling service",
-  },
-  {
-    icon: Wind,
-    title: "1.5 Ton AC Installation",
-    description:
-      "Professional split AC installation with safety checks.",
-    price: "1399",
-    image: "/src/components/assets/AC_Installation.jpeg",
-    alt: "Split AC installation service",
-  },
-  {
-    icon: Wrench,
-    title: "1.5 Ton AC Uninstallation",
-    description:
-      "Safe AC dismantling without gas leakage.",
-    price: "599",
-    image: "/src/components/assets/AC-Uninstallation.jpg",
-    alt: "AC uninstallation service",
-  },
-  {
-    icon: Snowflake,
-    title: "Cooling Issue Diagnosis",
-    description:
-      "Cooling problem inspection and troubleshooting.",
-    price: "399",
-    image: "/src/components/assets/Cooling_Issue.jpeg",
-    alt: "AC cooling issue diagnosis",
-  },
-  {
-    icon: Settings,
-    title: "Annual AC Maintenance (AMC)",
-    description:
-      "Complete yearly AC maintenance package.",
-    price: "1499",
-    image: "/src/components/assets/Annual_AC_Maintenance.jpeg",
-    alt: "Annual AC maintenance service",
-  },
-  {
-    icon: Gauge,
-    title: "AC PCB Repair",
-    description:
-      "PCB diagnosis and repair for all AC models.",
-    price: "Inspection Based",
-    image: "/src/components/assets/AC_PCB_Repair.jpg",
-    alt: "AC PCB repair service",
-  },
-];
-
 /* ---------------- Component ---------------- */
 
 const ServicesGrid = () => {
+  const SERVICES: Service[] = useMemo(
+    () => [
+      {
+        icon: Droplets,
+        title: "1.5 Ton AC Foam Jet Deep Cleaning",
+        description:
+          "High-pressure foam jet cleaning of indoor unit, filters, blower, and coils.",
+        price: "599",
+        image: "public/assets/AC_Foam_Jet_Deep_Cleaning.jpeg",
+        alt: "AC foam jet deep cleaning service",
+      },
+      {
+        icon: Thermometer,
+        title: "1.5 Ton AC Gas Top-Up",
+        description:
+          "Professional refrigerant gas top-up with pressure testing.",
+        price: "999",
+        image: "public/assets/AC_Gas.jpg",
+        alt: "AC gas top up service",
+      },
+      {
+        icon: Gauge,
+        title: "1.5 Ton AC Complete Gas Filling",
+        description:
+          "Complete gas evacuation, vacuuming, and fresh refrigerant filling.",
+        price: "1999",
+        image: "public/assets/AC_Gas.jpg",
+        alt: "AC complete gas filling service",
+      },
+      {
+        icon: Wind,
+        title: "1.5 Ton AC Installation",
+        description:
+          "Professional split AC installation with safety checks.",
+        price: "1399",
+        image: "public/assets/AC_Installation.jpeg",
+        alt: "Split AC installation service",
+      },
+      {
+        icon: Wrench,
+        title: "1.5 Ton AC Uninstallation",
+        description:
+          "Safe AC dismantling without gas leakage.",
+        price: "599",
+        image: "public/assets/AC-Uninstallation.jpg",
+        alt: "AC uninstallation service",
+      },
+      {
+        icon: Snowflake,
+        title: "Cooling Issue Diagnosis",
+        description:
+          "Cooling problem inspection and troubleshooting.",
+        price: "399",
+        image: "public/assets/Cooling_Issue.jpeg",
+        alt: "AC cooling issue diagnosis",
+      },
+      {
+        icon: Settings,
+        title: "Annual AC Maintenance (AMC)",
+        description:
+          "Complete yearly AC maintenance package.",
+        price: "1499",
+        image: "public/assets/Annual_AC_Maintenance.jpeg",
+        alt: "Annual AC maintenance service",
+      },
+      {
+        icon: Gauge,
+        title: "AC PCB Repair",
+        description:
+          "PCB diagnosis and repair for all AC models.",
+        price: "Inspection Based",
+        image: "public/assets/AC_PCB_Repair.jpg",
+        alt: "AC PCB repair service",
+      },
+    ],
+    []
+  );
+
   return (
     <section id="services" className="section-padding bg-muted/30">
       <div className="container-max">
@@ -129,10 +131,9 @@ const ServicesGrid = () => {
                   src={service.image}
                   alt={service.alt}
                   loading="lazy"
-                  className="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                  decoding="async"
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-
-                {/* Gradient overlay for polish */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
               </div>
 
