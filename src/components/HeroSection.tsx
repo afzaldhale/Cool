@@ -39,9 +39,8 @@ const HeroSection = () => {
 
       <div className="container-max section-padding relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
+          {/* LEFT CONTENT */}
           <div className="max-w-xl">
-            {/* Trust Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-md mb-8 animate-fade-up">
               <span className="text-secondary text-lg">⚡</span>
               <span className="text-primary font-medium text-sm">
@@ -49,7 +48,6 @@ const HeroSection = () => {
               </span>
             </div>
 
-            {/* Main Headline */}
             <h1
               className="text-foreground mb-2 animate-fade-up leading-tight"
               style={{ animationDelay: "0.1s" }}
@@ -60,7 +58,6 @@ const HeroSection = () => {
               <span className="block text-primary">in Pune</span>
             </h1>
 
-            {/* Subheadline */}
             <p
               className="text-lg text-muted-foreground mb-8 leading-relaxed animate-fade-up"
               style={{ animationDelay: "0.2s" }}
@@ -69,7 +66,6 @@ const HeroSection = () => {
               Keep your home cool with Sahara Cool Tech.
             </p>
 
-            {/* Highlights */}
             <div
               className="flex flex-wrap gap-6 mb-8 animate-fade-up"
               style={{ animationDelay: "0.3s" }}
@@ -84,12 +80,10 @@ const HeroSection = () => {
               ))}
             </div>
 
-            {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4 mb-10 animate-fade-up"
               style={{ animationDelay: "0.4s" }}
             >
-              {/* Call Button */}
               <a href={`tel:${PHONE_NUMBER}`}>
                 <Button
                   size="lg"
@@ -100,7 +94,6 @@ const HeroSection = () => {
                 </Button>
               </a>
 
-              {/* WhatsApp Button */}
               <a
                 href={WHATSAPP_LINK}
                 target="_blank"
@@ -117,7 +110,6 @@ const HeroSection = () => {
               </a>
             </div>
 
-            {/* Rating */}
             <div
               className="flex items-center gap-4 animate-fade-up"
               style={{ animationDelay: "0.5s" }}
@@ -156,57 +148,40 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Content */}
+          {/* RIGHT IMAGE (NEW) */}
+          {/* RIGHT IMAGE (CARD STYLE) */}
           <div
             className="hidden lg:flex justify-center animate-fade-up"
             style={{ animationDelay: "0.3s" }}
           >
             <div className="relative">
+              {/* Card */}
+              <div className="bg-white rounded-3xl shadow-2xl p-6 xl:p-8">
+                <img
+                  src="/assets/image.png"
+                  alt="AC installation and servicing"
+                  className="w-[360px] xl:w-[420px] rounded-2xl object-cover"
+                />
+              </div>
+
+              {/* Decorative dots / blobs (optional but classy) */}
               <div
-                className="absolute -top-8 -right-8 w-24 h-24 rounded-full opacity-50"
+                className="absolute -top-6 -right-6 w-20 h-20 rounded-full opacity-40"
                 style={{
                   background:
                     "linear-gradient(135deg, hsl(30 85% 70%) 0%, hsl(30 80% 60%) 100%)",
                 }}
               />
               <div
-                className="absolute -bottom-10 -left-10 w-32 h-32 rounded-full opacity-40"
+                className="absolute -bottom-8 -left-8 w-28 h-28 rounded-full opacity-30"
                 style={{
                   background:
                     "linear-gradient(135deg, hsl(185 65% 60%) 0%, hsl(180 55% 50%) 100%)",
                 }}
               />
-
-              <div className="relative bg-white rounded-3xl shadow-2xl p-10 w-80">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
-                    <svg
-                      className="w-10 h-10 text-primary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">
-                    Professional Service
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-2">
-                    All brands covered
-                  </p>
-                  <p className="text-muted-foreground text-sm">
-                    Split AC • Window AC • Cassette AC
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
+
         </div>
       </div>
 

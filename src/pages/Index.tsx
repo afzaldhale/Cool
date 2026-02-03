@@ -7,7 +7,7 @@ import LocationsSection from "@/components/LocationsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-
+import BrandsMarquee from "@/components/BrandsMarquee";
 const Index = () => {
   return (
     <div className="min-h-screen">
@@ -15,6 +15,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <ServiceHighlights />
+        <BrandsMarquee />
         <ServicesGrid />
         <PricingSection />
         <LocationsSection />
