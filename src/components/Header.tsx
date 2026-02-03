@@ -44,7 +44,7 @@ const Header = () => {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <img
-              src="public\assets\Sarahalogo.png"
+              src="/assets/Sarahalogo.png"
               alt="Sahara Cool Tech Logo"
               className="w-14 h-14 object-contain"
             />
