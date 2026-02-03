@@ -32,7 +32,7 @@ const ServicesGrid = () => {
         description:
           "High-pressure foam jet cleaning of indoor unit, filters, blower, and coils.",
         price: "599",
-        image: "public/assets/AC_Foam_Jet_Deep_Cleaning.jpeg",
+        image: "/assets/AC_Foam_Jet_Deep_Cleaning.jpeg",
         alt: "AC foam jet deep cleaning service",
       },
       {
@@ -41,7 +41,7 @@ const ServicesGrid = () => {
         description:
           "Professional refrigerant gas top-up with pressure testing.",
         price: "999",
-        image: "public/assets/AC_Gas.jpg",
+        image: "/assets/AC_Gas.jpg",
         alt: "AC gas top up service",
       },
       {
@@ -50,7 +50,7 @@ const ServicesGrid = () => {
         description:
           "Complete gas evacuation, vacuuming, and fresh refrigerant filling.",
         price: "1999",
-        image: "public/assets/AC_Gas.jpg",
+        image: "/assets/AC_Gas.jpg",
         alt: "AC complete gas filling service",
       },
       {
@@ -59,7 +59,7 @@ const ServicesGrid = () => {
         description:
           "Professional split AC installation with safety checks.",
         price: "1399",
-        image: "public/assets/AC_Installation.jpeg",
+        image: "/assets/AC_Installation.jpeg",
         alt: "Split AC installation service",
       },
       {
@@ -68,7 +68,7 @@ const ServicesGrid = () => {
         description:
           "Safe AC dismantling without gas leakage.",
         price: "599",
-        image: "public/assets/AC-Uninstallation.jpg",
+        image: "/assets/AC-Uninstallation.jpg",
         alt: "AC uninstallation service",
       },
       {
@@ -77,7 +77,7 @@ const ServicesGrid = () => {
         description:
           "Cooling problem inspection and troubleshooting.",
         price: "399",
-        image: "public/assets/Cooling_Issue.jpeg",
+        image: "/assets/Cooling_Issue.jpeg",
         alt: "AC cooling issue diagnosis",
       },
       {
@@ -86,7 +86,7 @@ const ServicesGrid = () => {
         description:
           "Complete yearly AC maintenance package.",
         price: "1499",
-        image: "public/assets/Annual_AC_Maintenance.jpeg",
+        image: "/assets/Annual_AC_Maintenance.jpeg",
         alt: "Annual AC maintenance service",
       },
       {
@@ -95,7 +95,7 @@ const ServicesGrid = () => {
         description:
           "PCB diagnosis and repair for all AC models.",
         price: "Inspection Based",
-        image: "public/assets/AC_PCB_Repair.jpg",
+        image: "/assets/AC_PCB_Repair.jpg",
         alt: "AC PCB repair service",
       },
     ],
